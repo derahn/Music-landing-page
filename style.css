@@ -6,16 +6,20 @@ body {
   height: 100vh;
   font-family: Helvetica;
 }
+.left-col {
+  background-attachment: fixed;
+  background-size: cover;
+  width: 50%;
+  height: 100vh;
+  background-size: cover;
+  background-color: #444;
+}
 
 .left-col,
 .right-col {
   position: absolute;
   width: 50%;
   height: 100vh;
-}
-
-.left-col {
-  background: #6278f3;
 }
 
 .right-col {
@@ -42,10 +46,36 @@ body {
   .left-col {
     width: 100%;
   }
+  .left-col .logo {
+    left: 5%;
+  }
+  .left-col .data {
+    position: absolute;
+    top: 33%;
+    left: 7%;
+    color: #fff;
+  }
+  .left-col .cover .play {
+    position: absolute;
+    left: 15%;
+    top: 43%;
+  }
+  .left-col .year {
+    bottom: 10%;
+    left: -5%;
+  }
+
   .right-col {
     width: 100%;
     top: 100%;
     left: 0%;
+  }
+  .right-col .upper .about {
+    left: 35%;
+    font-size: 10px;
+  }
+  .right-col .media ion-icon {
+    font-size: 15px;
   }
 }
 .logo {
@@ -98,7 +128,7 @@ body {
 .data {
   position: absolute;
   top: 36%;
-  left: 16%;
+  left: 20%;
   transform: translate(-50% -50%);
   color: #000;
   font-family: Poppins;
@@ -106,11 +136,12 @@ body {
   letter-spacing: 4px;
 }
 
-#artist {
-  font-size: 10px;
+.data .album-artist {
+  font-size: 12px;
 }
 
-ion-icon {
+.play,
+.next ion-icon {
   position: absolute;
   top: 40%;
   left: 35%;
@@ -119,4 +150,64 @@ ion-icon {
   border-radius: 50%;
   border: 2px solid rgba(255, 255, 255, 0.3);
   padding: 2em;
+}
+.play,
+.next ion-icon:hover {
+  color: #6278f3;
+  transition: all 0.5s ease-out;
+}
+
+.media ion-icon {
+  font-size: 25px;
+}
+
+.about {
+  position: absolute;
+  top: 50%;
+  left: 26%;
+  transform: translate(-50%, -50%);
+}
+
+.about h1 {
+  font-weight: bolder;
+  color: #6f6457;
+  font-family: Poppins;
+  text-transform: uppercase;
+}
+
+.about p {
+  color: #bcac98;
+  font-family: Poppins;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.about span:hover {
+  text-decoration: underline;
+  transition: all 0.5s ease-out;
+}
+
+.media {
+  margin-top: 20px;
+}
+media p {
+  color: #6f6457;
+  margin-bottom: 0;
+}
+.media ul {
+  position: absolute;
+  list-style: none;
+  left: -24%;
+  margin-top: 0%;
+}
+.media ul li {
+  display: inline-block;
+  color: #fff;
+  padding-right: 12px;
+}
+.right-col .media ion-icon:hover {
+  color: #6278f3;
+  transition: all 0.5s ease-out;
 }
