@@ -38,7 +38,7 @@ body {
   top: 50%;
   height: 50vh;
   width: 100%;
-  background: url(img/burna1.jpeg) no-repeat 50% 50%;
+  background: url(img/burna2.jpeg) no-repeat 50% 50%;
   background-size: cover;
 }
 
@@ -84,11 +84,12 @@ body {
   position: fixed;
   margin: 1.4em;
   font-weight: bolder;
+  font-size: 1.5rem;
 }
 
 .year {
   position: absolute;
-  color: #000;
+  color: rgb(247, 93, 22);
   font-family: Poppins;
   bottom: 8%;
   font-weight: bolder;
@@ -97,11 +98,11 @@ body {
 }
 
 .buy {
-  color: #a89174;
+  color: rgb(247, 93, 22);
   font-family: Poppins;
   text-decoration: none;
   position: absolute;
-  right: 0%;
+  right: 50%;
   top: -2%;
   margin: 1.4em;
   text-decoration: underline;
@@ -130,14 +131,16 @@ body {
   top: 36%;
   left: 20%;
   transform: translate(-50% -50%);
-  color: #000;
+  color: rgb(247, 93, 22);
   font-family: Poppins;
+  font-weight: bolder;
   text-transform: uppercase;
   letter-spacing: 4px;
 }
 
 .data .album-artist {
   font-size: 12px;
+  font-weight: normal;
 }
 
 .play,
@@ -146,24 +149,24 @@ body {
   top: 40%;
   left: 35%;
   transform: translate(-50% -50%);
-  color: #fff;
+  color: #444;
   border-radius: 50%;
   border: 2px solid rgba(255, 255, 255, 0.3);
   padding: 2em;
 }
 .play,
 .next ion-icon:hover {
-  color: #6278f3;
+  color: rgb(247, 93, 22);
   transition: all 0.5s ease-out;
 }
 
 .media ion-icon {
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .about {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 26%;
   transform: translate(-50%, -50%);
 }
@@ -208,6 +211,177 @@ media p {
   padding-right: 12px;
 }
 .right-col .media ion-icon:hover {
-  color: #6278f3;
+  color: rgb(247, 93, 22);
   transition: all 0.5s ease-out;
+}
+
+.next ion-icon {
+  position: absolute;
+  top: 23%;
+  left: 23%;
+  transform: translate(-50% -50%);
+  color: #fff;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  padding: 2em;
+}
+
+.data2 {
+  position: absolute;
+  top: 20%;
+  left: 37%;
+  color: #fff;
+  font-family: Popppins;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 15px;
+}
+.data2 .album-artist3 {
+  font-size: 12px;
+}
+
+.more {
+  position: absolute;
+  top: 80%;
+  left: 37%;
+  color: #fff;
+  font-family: Poppins;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 15px;
+}
+.more:hover {
+  text-decoration: underline;
+  transition: all 0.5s ease-out;
+}
+
+/*animations left side*/
+
+.left-col {
+  opacity: 0;
+  animation: appear-text 0.0001s linear forwards;
+  animation-delay: 1.4s;
+}
+
+.left-col:after {
+  content: " ";
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: #a89174;
+  position: absolute;
+  animation: rev-block 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+  animation-delay: 1s;
+  /*transition: all 0.5s ease-out;*/
+}
+
+.cover {
+  opacity: 0;
+  animation: appear-text 0.0001s linear forwards;
+  animation-delay: 2.2s;
+}
+
+.cover:after {
+  content: "";
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  background: rgb(247, 93, 22);
+  animation: rev-block 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+  animation-delay: 1.8s;
+}
+
+@keyframes rev-block {
+  0% {
+    left: 0%;
+    width: 0%;
+  }
+
+  50% {
+    left: 0;
+    width: 100%;
+  }
+
+  100% {
+    left: 100%;
+    width: 0%;
+  }
+}
+
+@keyframes appear-text {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/*animations right side*/
+.upper {
+  opacity: 0;
+  animation: appear-text 0.0001s linear forwards;
+  animation-delay: 2s;
+}
+
+.upper:after {
+  content: " ";
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: #444;
+  position: absolute;
+  animation: rev-block 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+  animation-delay: 1.4s;
+  /*transition: all 0.5s ease-out;*/
+}
+
+.bottom {
+  opacity: 0;
+  animation: appear-text 0.0001s linear forwards;
+  animation-delay: 2.2s;
+}
+
+.bottom:after {
+  content: "";
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  background: #a89174;
+  animation: rev-block 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+  animation-delay: 1.8s;
+}
+
+@keyframes rev-block {
+  0% {
+    left: 0%;
+    width: 0%;
+  }
+
+  50% {
+    left: 0;
+    width: 100%;
+  }
+
+  100% {
+    left: 100%;
+    width: 0%;
+  }
+}
+
+@keyframes appear-text {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
