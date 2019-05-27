@@ -1,10 +1,11 @@
 # Music landing page
 
-This is a simple design of a music landing page. The inspiration for this page is the well renowned African artist _Burna boy._
+This is a simple design of a music landing page. The inspiration for this page is from the well renowned African artist _Burna boy._
 
 ## Contents
 
 ---
+
 - img
 - Index.html
 - style.css

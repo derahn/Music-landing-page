@@ -338,7 +338,6 @@ media p {
   position: absolute;
   animation: rev-block 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
   animation-delay: 1.4s;
-  /*transition: all 0.5s ease-out;*/
 }
 
 .bottom {
